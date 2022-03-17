@@ -1,21 +1,22 @@
 package Ejercicio1;
 
-import static Ejercicio1.Estado.PEDIDA;
-
 enum Tamano{
     MEDIANA, FAMILIAR
 }
 
-public class Pizza extends Pizzeria {
+public class Pizza extends Producto {
 
     private Tamano tamano;
     private static int numeroPizza;
+    protected static int numeroPizzaServida=0;
 
     public Pizza( Tipo tipo, Tamano tamano){
          super(tipo);
          this.tamano=tamano;
          numeroPizza++;
     }
+
+
 
     public Tamano getTamano() {
         return tamano;
@@ -31,6 +32,14 @@ public class Pizza extends Pizzeria {
 
     public static void setNumeroPizza(int numeroPizza) {
         Pizza.numeroPizza = numeroPizza;
+    }
+
+    public static int getNumeroPizzaServida() {
+        return numeroPizzaServida;
+    }
+
+    public static void setNumeroPizzaServida(int numeroPizzaServida) {
+        Pizza.numeroPizzaServida = numeroPizzaServida;
     }
 }
 

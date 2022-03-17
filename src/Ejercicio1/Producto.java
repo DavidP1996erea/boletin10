@@ -1,5 +1,7 @@
 package Ejercicio1;
 
+import static Ejercicio1.Pizza.numeroPizzaServida;
+
 enum Tipo{
     MARGARITA, CUATROQUESO, FUNGHI
 }
@@ -9,19 +11,23 @@ enum Estado{
 }
 
 
-public class Pizzeria {
+public class Producto {
 
     public  Estado estado;
 
-    public Pizzeria(Tipo tipo) {
+    public Producto(Tipo tipo) {
 
        this.estado=Estado.PEDIDA;
     }
 
-    public static void servir(Pizzeria producto){
+    public static void servir(Producto producto){
 
         producto.setEstado(Estado.SERVIDA);
-        System.out.println(producto.getEstado());
+
+        if(producto.getClass()==Pizza.class){
+            numeroPizzaServida++;
+
+        }
 
     }
 
