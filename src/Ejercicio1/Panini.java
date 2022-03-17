@@ -13,6 +13,8 @@ public class Panini extends Producto{
     private TamanoPanini tamanoPanini;
     private TipoPanini tipoPanini;
     private static int numeroPaniniPedido=0;
+    protected static int numeroPaniniServido=0;
+
 
     public Panini(Tipo tipo, TamanoPanini tamanoPanini, TipoPanini tipoPanini){
 

@@ -1,6 +1,7 @@
 package Ejercicio1;
 
 import static Ejercicio1.Pizza.numeroPizzaServida;
+import static Ejercicio1.Panini.numeroPaniniServido;
 
 enum Tipo{
     MARGARITA, CUATROQUESO, FUNGHI
@@ -27,6 +28,8 @@ public class Producto {
         if(producto.getClass()==Pizza.class){
             numeroPizzaServida++;
 
+        }else if(producto.getClass()==Panini.class){
+            numeroPaniniServido++;
         }
 
     }
